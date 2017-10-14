@@ -36,78 +36,72 @@ Hover 附加新的样式
 
 **box-sizing**
 
-box-sizing:border-box;
-
--moz-box-sizing:border-box; /* Firefox */
-
--webkit-box-sizing:border-box; /* Safari */
-
-box-sizing: content-box|border-box|inherit;
+        box-sizing:border-box;
+		-moz-box-sizing:border-box; /* Firefox */
+		-webkit-box-sizing:border-box; /* Safari */
+		box-sizing: content-box|border-box|inherit;
 
 
 seo查询   h1 logo 
 cursor：pointer 光标变手
 
 **弹窗**
-
-{
-
-	width：100%；
-	height：100%；
-	position：fixed;
-	Top:0;
-	Left:0;
-}
+    
+       {
+	    width：100%；
+		height：100%；
+		position：fixed;
+		Top:0;
+		Left:0;
+	   }
 ####overflow
 + 单行文本的溢出显示省略号
 
-	{
-	overflow: hidden;  
-	text-overflow:ellipsis;    
-	white-space: nowrap
-	}
+		{
+		overflow: hidden;  
+		text-overflow:ellipsis;    
+		white-space: nowrap
+		}
 + 实现多行文本显示省略号
-
-	{
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 3;  显示三行
-	overflow: hidden;
-	}
+        {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;  显示三行
+		overflow: hidden;
+		}
 ###图片水平居中的两种方式
 
 **有宽度跟高度上下左右居中**
-'''
-img{
-    position: absolute;
-    width: 200px; 
-    height: 464px;
-    left: 50%;
-    top: 50%;
-    margin-left: -100px;
-    margin-top: -232px;
-   }
-img {
-    position: absolute;
-    width: 200px;
-    height: 464px;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-}
-'''
+
+    img{
+	    position: absolute;
+	    width: 200px; 
+	    height: 464px;
+	    left: 50%;
+	    top: 50%;
+	    margin-left: -100px;
+	    margin-top: -232px;
+	   }
+	img {
+	    position: absolute;
+	    width: 200px;
+	    height: 464px;
+	    left: 0;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    margin: auto;
+	}
 ###重置行高样式
 line-height：1；子元素继承父元素的样式 恢复到原来。
 
 **box-shadow**: h-shadow v-shadow blur spread color inset;
              水平        垂直      模糊距离    颜色   内部阴影
 ###tab切换
-$(function(){
+    $(function(){
 	   	   $(".tab ul li").click(function(){
                $(this).addClass("select").siblings().removeClass("select");
                var index =$(this).index();
                $(".conbox div").eq(index).show().siblings().hide();
 	   	   })
-})
+    })
