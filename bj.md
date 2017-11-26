@@ -97,11 +97,35 @@ line-height：1；子元素继承父元素的样式 恢复到原来。
 
 **box-shadow**: h-shadow v-shadow blur spread color inset;
              水平        垂直      模糊距离    颜色   内部阴影
-###tab切换
-    $(function(){
-	   	   $(".tab ul li").click(function(){
-               $(this).addClass("select").siblings().removeClass("select");
-               var index =$(this).index();
-               $(".conbox div").eq(index).show().siblings().hide();
-	   	   })
-    })
+
+###阻止链接跳转的方式
++ javascript:void(0)
++ #
+
+#移动端
+###左边固定右边自适应
+###图片自适应
+     .discuss-item,.doctor-item{
+	   	padding:1.5rem 1.5rem 1.5rem 7rem;
+	   	position: relative;
+	   	background: #FFFFFF;
+        border-bottom: 0.5rem solid #f1f1f1;
+	   }
+	   .discuss-item{
+	   	border:0.05rem solid #E7E7E7;
+	   }
+	   .author-img{
+	   	width:4rem;
+	   	height:4rem;
+	   	border-radius: 100%;
+	   	position: absolute;
+	   	left:1.5rem;
+	   	top:1.5rem;
+	   }
+
+**清除input focus样式**
+
+       input:focus{
+            outline: none;
+         border:1px solid #00b38a; 
+        }
